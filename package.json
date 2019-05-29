@@ -1,0 +1,15 @@
+{
+  "name": "incdonacion",
+  "version": "1.0.0",
+  "description": "Un manejador de donaciones para beneficiencias",
+  "main": "index.js",
+  "scripts": {
+    "start": "pm2 start app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.0"
+  }
+}
