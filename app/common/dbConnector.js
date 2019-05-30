@@ -8,7 +8,7 @@ var mongoDB = 'mongodb://127.0.0.1/incdonations';
 var DBConnector = function(){};
 
 DBConnector.prototype.getConnection = function(){
-	mongoose.connect(mongoDB);
+	mongoose.connect(mongoDB,{useFindAndModify:false});
 	mongoose.Promise = global.Promise;
 
 	let db = mongoose.connection;
