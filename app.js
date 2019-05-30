@@ -3,6 +3,7 @@ let express = require('express');
 let app = express();
 //let donationController = require('./app/controllers/donation');
 let routes = require('./app/routes');
+let bodyParser = require('body-parser');
 
 // app.use(app.router);
 // app.get('/', function (req, res) {
@@ -15,6 +16,9 @@ let routes = require('./app/routes');
 // });
 
 //app.get('/',donationController.index);
+
+app.use(bodyParser.urlencoded());
+app.use(bodyParser.json());
 
 routes.initialize(app);
 
