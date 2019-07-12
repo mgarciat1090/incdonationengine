@@ -1,14 +1,10 @@
 var dbConnector = require('../../common/dbConnector');
+var donationModel = require('../../models/donationModel');
 
 /* DB Connect */
 dbConnector.getConnection();
-const objBlueprint = {
-	author: 	String,
-	date: 		Date,
-	amount: 	Number,
-	comment: 	String
-};
-const DonationSchema = dbConnector.generateSchema(objBlueprint);
+
+const DonationSchema = dbConnector.generateSchema(donationModel);
 var DonationModel = dbConnector.generateModel('DonationModel',DonationSchema);
 
 
