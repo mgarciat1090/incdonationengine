@@ -25,13 +25,15 @@ app.use((req, res, next) => {
     next();
 });
 
+app.get('/*', function(req,res) {
+ 	//res.status(200).send("Hellow World");
+	res.sendFile(path.join(__dirname+'/dist/incdonation/index.html'));
+});
 
 app.use(bodyParser.urlencoded());
 app.use(bodyParser.json());
 
 routes.initialize(app);
 
-
-app.listen(3000, function () {
-  console.log('PM2 Example app listening on port 3000!');
-});
+// Start the app by listening on the default Heroku port
+app.listen(process.env.PORT || 8080);
