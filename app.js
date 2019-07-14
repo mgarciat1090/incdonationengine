@@ -1,6 +1,7 @@
 
 let express = require('express');
 let app = express();
+const path = require('path');
 //let donationController = require('./app/controllers/donation');
 let routes = require('./app/routes');
 let bodyParser = require('body-parser');
@@ -25,9 +26,9 @@ app.use((req, res, next) => {
     next();
 });
 
-app.get('/*', function(req,res) {
- 	//res.status(200).send("Hellow World");
-	res.sendFile(path.join(__dirname+'/dist/incdonation/index.html'));
+app.get('/', function(req,res) {
+ 	res.status(200).send("Hellow World");
+	//res.sendFile(path.join(__dirname+'/dist/incdonation/index.html'));
 });
 
 app.use(bodyParser.urlencoded());
