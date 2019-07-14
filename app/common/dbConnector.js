@@ -3,7 +3,8 @@ var Schema = mongoose.Schema;
 var ObjectId = Schema.ObjectId;
 
 
-var mongoDB = 'mongodb://127.0.0.1/incdonations';
+//var mongoDB = 'mongodb://127.0.0.1/incdonations';
+var mongoDB = 'mongodb://incdonation:incdonation123@ds123625.mlab.com:23625/heroku_8h6lmjtc';
 
 var DBConnector = function(){};
 
